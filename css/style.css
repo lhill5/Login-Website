@@ -1,0 +1,95 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* background-color: #40739e; */
+    /* background-color: #82ccdd; */
+    /* background-color: #60a3bc; */
+    background-image: linear-gradient(to bottom right, #82ccdd, #2d98da);
+    /* Standard syntax (must be last) */
+    /* background-color: #2d98da; */
+}
+
+.navbar {
+    /* background-color: #000; */
+    margin-bottom: 10px;
+}
+
+.navbar .navbar-brand {
+    color: #bdc3c7 !important;
+}
+
+.navbar .nav-link {
+    color: #bdc3c7 !important;
+}
+
+#header {
+    font-size: large;
+    font-size: 22px;
+    /* border: purple 1px solid; */
+}
+
+#form-container {
+    justify-content: flex-end !important;
+}
+
+#submit-button {
+    margin-right: 185px;
+    margin-top: 10px;
+    flex-basis: 8%;
+}
+
+#checkbox-form {
+    width: 0.8em;
+    height: 0.8em;
+}
+
+#gender {
+    color: #7f8c8d;
+    background-color: #f5f6fa;
+}
+
+#jumbotron {
+    height: 130px;
+    margin: 0;
+    padding: 0;
+    padding-top: 25px;
+}
+
+#navbar {
+    margin-bottom: 15px;
+}
+
+#navbar #navbar-buttons {
+    margin-right: 15px;
+}
+
+#navbar #navbar-buttons #navbar-login {
+    margin-right: 5px;
+}
+
+#jumbotron p {
+    padding-left: 20px;
+}
+
+/* .birthday-select-group {
+    flex-basis: 30%;
+} */
+
+/* #birthday-select {
+    flex-basis: 100%;
+} */
+
+/* #birthday {
+    margin-left: 100px;
+} */
+
+/* 
+.gender {
+    width: 1em;
+    height: 1em;
+}
+ */

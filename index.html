@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login Form</title>
+</head>
+
+
+<body>
+    <!-- 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-collapse collapse w-100 order-0 dual-collapse2" style="border: red 1px solid">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Left</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="//codeply.com">Codeply</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+        <div class="mx-auto order-1" style="border: blue 1px solid">
+            <a class="navbar-brand mx-auto" href="#">Navbar 2</a>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-2" style="border: green 1px solid">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Right</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ -->
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+
+        <div class="d-inline-flex justify-content-left order-0 w-100 mr-auto" id="header">
+            <a class="nav-link" href="index.html">Home</a>
+        </div>
+
+        <div class="d-inline-flex justify-content-center order-1 w-100 mx-auto">
+            <h1><a class="nav-link" href="#">Welcome To YouPlex!</a></h1>
+        </div>
+
+        <div class="d-inline-flex justify-content-end order-2 w-100 ml-auto" id="navbar-flex">
+
+            <ul class="navbar-nav" id="navbar-buttons">
+                <li class="nav-item" id="navbar-login">
+                    <button class="btn btn-outline-primary mr-3" href="#">Login</button>
+                </li>
+
+                <li class="nav-item" id="navbar-signUp">
+                    <a class="btn btn-outline-success" href="index.html">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid text-center" id="jumbotron">
+        <div class="container">
+            <h2 class="display-5">Please Sign Up by Creating an Account Below!</h2>
+            <p class="lead">All fields below must be filled out correctly before submitting the form.</p>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- FORM -->
+    <form action="" class="d-flex w-100">
+
+        <div class="container order-0 ml-5 mt-2 w-100" id="form-container">
+            <div class="form-group w-75 text-input">
+                <label for="first-name">First Name</label>
+                <input id="first-name" type="text" class="form-control" placeholder="first name">
+            </div>
+
+            <div class="form-group w-75 text-input">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" type="text" class="form-control" value="" placeholder="last name">
+            </div>
+
+            <div class="form-group w-75 text-input">
+                <label for="phone-number">Phone Number</label>
+                <input id="phone-number" type="text" class="form-control" value="" placeholder="phone number">
+            </div>
+
+
+            <div class="form-group w-75">
+
+                <div class="d-flex w-100">
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-md-6 ml-0 pl-0">
+                                <label for="Gender" class="" id="Gender">Gender</label>
+                            </div>
+
+                            <div class="col-md-6 ml-0 pl-0">
+                                <label for="birthday" id="birthday">Birthday</label>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="dropdown w-50 p-0 m-0">
+                                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                    id="gender" value="">
+                                    Select Gender
+                                </button>
+                                <div class="dropdown-menu" id="select-gender">
+                                    <a class="dropdown-item" id="Male" href="#">Male</a>
+                                    <a class="dropdown-item" id="Female" href="#">Female</a>
+                                    <a class="dropdown-item" id="Other" href="#">Other</a>
+                                </div>
+                            </div>
+
+                            <div class="d-inline-flex w-50 justify-content-between p-0 m-0" id="birthday-select">
+
+                                <!-- <div class="dropdown p-0 m-0 ">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                        id="dropdown-button">Month</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" id="1" href="#">Male</a>
+                                        <a class="dropdown-item" id="2" href="#">Female</a>
+                                        <a class="dropdown-item" id="3" href="#">Other</a>
+                                    </div>
+                                </div>
+   
+                                <div class="dropdown p-0 m-0 ">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                    id="dropdown-button">Day</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" id="1" href="#">Male</a>
+                                        <a class="dropdown-item" id="2" href="#">Female</a>
+                                        <a class="dropdown-item" id="3" href="#">Other</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="dropdown p-0 m-0 ">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                                    id="dropdown-button">Year</button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" id="1" href="#">Male</a>
+                                        <a class="dropdown-item" id="2" href="#">Female</a>
+                                        <a class="dropdown-item" id="3" href="#">Other</a>
+                                    </div>
+                                </div> -->
+
+                                <div class="form-group birthday-select-group">
+                                    <select class="form-control" id="day">
+                                        <option value="" selected hidden disabled>Day</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group birthday-select-group">
+                                    <select class="form-control" id="month">
+                                        <option value="" selected hidden disabled>Month</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group birthday-select-group">
+                                    <select class="form-control" id="year">
+                                        <option value="" selected hidden disabled>Year</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 
+                    <div class="form-check-inline">
+                        <input type="radio" class="form-check-input gender">Male
+                    </div>
+
+                    <div class="form-check-inline">
+                        <input type="radio" class="form-check-input gender">Female
+                    </div>
+
+                    <div class="form-check-inline">
+                        <input type="radio" class="form-check-input gender">Other
+                    </div> 
+                -->
+
+            </div>
+
+
+        </div>
+
+        <div class="container order-1 ml-5 mt-2 w-100">
+            <div class="form-group w-75 text-input">
+                <label for="username">Enter Username:</label>
+                <input id="username" type="text" class="form-control" value="" placeholder="username">
+            </div>
+
+            <div class="form-group w-75 text-input">
+                <label for="email">Enter Email:</label>
+                <input id="email" type="email" class="form-control" value="" placeholder="example@gmail.com">
+            </div>
+
+            <div class="form-group w-75 text-input">
+                <label for="password">Enter Password:</label>
+                <input id="password" type="password" class="form-control" value="" placeholder="password">
+            </div>
+
+            <div class="form-group w-75 text-input">
+                <label for="confirm-password">Confirm Password:</label>
+                <input id="confirm-password" type="password" class="form-control" value=""
+                    placeholder="confirm password">
+            </div>
+
+        </div>
+
+    </form>
+
+    <br>
+    <!-- SUBMIT BUTTON -->
+    <div class="ml-0 w-100 d-flex justify-content-end">
+        <input type="submit" class="btn btn-primary" id="submit-button" value="Submit">
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="js/js_cookies.js"></script>
+
+
+</body>
+
+</html>
