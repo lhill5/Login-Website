@@ -9,6 +9,7 @@ body {
     /* background-color: #82ccdd; */
     /* background-color: #60a3bc; */
     background-image: linear-gradient(to bottom right, #82ccdd, #2d98da);
+    /* background-color: #ecf0f1; */
     /* Standard syntax (must be last) */
     /* background-color: #2d98da; */
 }
@@ -74,6 +75,7 @@ body {
 #jumbotron p {
     padding-left: 20px;
 }
+
 
 /* .birthday-select-group {
     flex-basis: 30%;
