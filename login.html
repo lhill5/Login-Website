@@ -30,33 +30,35 @@
     </div> -->
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
+    <div class="height-10">
 
-        <div class="d-inline-flex justify-content-left order-0 w-100 mr-auto" id="header">
-            <a class="nav-link" href="index.html">Home</a>
-        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
 
-        <div class="d-inline-flex justify-content-center order-1 w-100 mx-auto">
-            <h1><a class="nav-link" href="#">Welcome To YouPlex!</a></h1>
-        </div>
+            <div class="d-inline-flex justify-content-left order-0 w-100 mr-auto" id="header">
+                <a class="nav-link" href="index.html">Home</a>
+            </div>
 
-        <div class="d-inline-flex justify-content-end order-2 w-100 ml-auto" id="navbar-flex">
+            <div class="d-inline-flex justify-content-center order-1 w-100 mx-auto">
+                <h1><a class="nav-link" href="#">Welcome To YouPlex!</a></h1>
+            </div>
 
-            <ul class="navbar-nav" id="navbar-buttons">
-                <li class="nav-item" id="navbar-login">
-                    <button class="btn btn-outline-primary mr-3" href="#">Login</button>
-                </li>
+            <div class="d-inline-flex justify-content-end order-2 w-100 ml-auto" id="navbar-flex">
 
-                <li class="nav-item" id="navbar-signUp">
-                    <a class="btn btn-outline-success" href="index.html">Sign Up</a>
-                </li>
-            </ul>
-        </div>
+                <ul class="navbar-nav" id="navbar-buttons">
+                    <li class="nav-item" id="navbar-login">
+                        <button class="btn btn-outline-primary mr-3" href="#">Login</button>
+                    </li>
 
-    </nav>
+                    <li class="nav-item" id="navbar-signUp">
+                        <a class="btn btn-outline-success" href="index.html">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
 
+        </nav>
+    </div>
 
-    <div class="centerFlex border border-dark">
+    <div class="centerFlex height-90">
 
         <div class="w-25 h-50 text-center pt-2">
             <img src="png/website-logo.png" width=75px; height=75px; alt="">
@@ -72,11 +74,30 @@
                     <div class="form-group w-75 m-0 p-0">
                         <input type="email" class="form-control" placeholder="Email Address" id="email-login">
                     </div>
+                    <div class="pos-relative" id="email-help">
+                        <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute" id="email-help-img">
+                        <div class="pos-absolute" id="email-help-text">
+                            <span>
+                                Must begin with a letter, contain only alphanumeric characters, use no special symbols, 
+                                and end with a valid address.
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="d-flex justify-content-center">
+                    
                     <div class="form-group w-75 m-0 p-0">
                         <input type="password" class="form-control" placeholder="Password" id="password-login">
+                    </div>
+                    <div class="pos-relative" id="password-help">
+                        <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute" id="password-help-img">
+                        <div class="pos-absolute" id="password-help-text">
+                            <span>
+                                Must contain at least one number, symbol, lowercase letter, uppercase letter, and must be
+                                between 8-16 characters long.
+                            </span>
+                        </div>
                     </div>
                 </div>
 
@@ -110,9 +131,9 @@
         crossorigin="anonymous"></script>
 
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/jQuery.js"></script>
+    <script src="js/jQuery-functions.js"></script>
+    <script src="js/jQuery-login.js"></script>
     <script src="js/js_cookies.js"></script>
-
 
 </body>
 

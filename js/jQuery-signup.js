@@ -1,31 +1,3 @@
-let invalidInput = (jquery_obj) => {
-    let id = jquery_obj.attr('id');
-    let placeholder_message = "";
-    switch (id) {
-        case 'phone-number':
-            placeholder_message = 'Not a valid phone number';
-            break;
-        case 'first-name':
-        case 'last-name':
-        case 'username':
-            placeholder_message = 'Must be less than 16 characters';
-            break;
-        case 'password':
-            placeholder_message = 'Must be between 8-16 characters';
-            break;
-        case 'email':
-            placeholder_message = 'Not a valid email address';
-            break;
-        case 'confirm-password':
-            placeholder_message = "Doesn't match Password";
-            break;
-    }
-
-    jquery_obj.css({ 'border': 'red 1.5px solid' });
-    jquery_obj.attr('placeholder', placeholder_message);
-    jquery_obj.val("");
-}
-
 
 $(function () {
 
@@ -187,20 +159,20 @@ $(function () {
 
             // check to see if account already exists by checking cookies
             // returns true if account does not exist
-            let newAccount = checkForExistingAccount(user_info);
+            let new_account = newAccount(user_info);
 
-            if (newAccount) {
+            if (new_account) {
 
                 // create a cookie to store user's info
                 obj_num = Object.keys(Cookies.get()).length + 1;
 
                 obj_key = 'object' + String(obj_num);
 
-                Cookies.set(obj_key, JSON.stringify(user_info));
+                Cookies.set(obj_key, JSON.stringify(user_info), {expires: 365});
 
                 // window.location.replace('secondpage.html');
                 window.location.href = 'account_created.html';
-                
+
             } else {
                 print('An account associated with that email already exists. Please Login In.');
             }
@@ -263,30 +235,6 @@ $(function () {
     // });
 
 });
-
-
-let isNum = function (val) {
-    return /^\d+$/.test(val);
-}
-
-function print(item) {
-    console.log(item);
-}
-
-function checkForExistingAccount(user_info) {
-
-    let cookies = Cookies.get();
-    // key will be object1, object2, etc.
-    for (let key in cookies) {
-        // convert string (JSON.stringify(obj)) to json object
-        let value = JSON.parse(cookies[key]);
-        // if an account with the same email already exists, then it's not a new account (return false)
-        if (value.email === user_info.email) {
-            return false;
-        }
-    }
-    return true;
-}
 
 
 // function setCookie(cname, cvalue, exdays) {
