@@ -76,6 +76,51 @@ body {
     padding-left: 20px;
 }
 
+.pos-absolute {
+    position: absolute;
+}
+
+.pos-relative {
+    position: relative;
+}
+
+#password {
+}
+
+#email-help-img, #password-help-img {
+    visibility: hidden;
+    top: -30px;
+    right: 0;
+    bottom: 0;
+}
+
+#email-help-img {
+    left: 38%;
+}
+
+#password-help-img {
+    left: 26%;
+}
+
+#email-help-text, #password-help-text {
+    display: none;
+    margin-top: 5px;
+    margin-left: 35px;
+    padding: 0;
+    height: 55px;
+    width: 450px;
+}
+
+#email-help:hover #email-help-text {
+    display: block;
+    background: rgba(255, 82, 82, 1);
+}
+
+#password-help:hover #password-help-text {
+    display: block;
+    background: rgba(255, 82, 82, 1);
+}
+
 
 /* .birthday-select-group {
     flex-basis: 30%;

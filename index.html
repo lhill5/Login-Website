@@ -223,11 +223,30 @@
             <div class="form-group w-75 text-input">
                 <label for="email">Enter Email:</label>
                 <input id="email" type="email" class="form-control" value="" placeholder="example@gmail.com">
+                <div class="pos-relative" id="email-help">
+                    <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute"
+                        id="email-help-img">
+                    <div class="pos-absolute" id="email-help-text">
+                        <span>
+                            Must begin with a letter, contain only alphanumeric characters, use no special symbols,
+                            and end with a valid address.
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group w-75 text-input">
                 <label for="password">Enter Password:</label>
                 <input id="password" type="password" class="form-control" value="" placeholder="password">
+                <div class="pos-relative" id="password-help">
+                    <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute" id="password-help-img">
+                    <div class="pos-absolute" id="password-help-text">
+                        <span>
+                            Must contain at least one number, symbol, lowercase letter, uppercase letter, and must
+                            be between 8-16 characters long.
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group w-75 text-input">

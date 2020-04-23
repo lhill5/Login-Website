@@ -77,7 +77,7 @@ body {
 }
 
 .board {
-    border: red 10px solid;
+    border: red 1px solid;
 }
 
 .height-10 {
@@ -121,3 +121,14 @@ body {
     background: rgba(255, 82, 82, 0.7);
 }
 
+#no-account {
+    visibility: hidden;
+    width: 425px;
+    height: 65px;
+    background-color: #ff5252;
+    align-items: center;
+}
+
+#submit-login {
+    margin-top: 15px;
+}

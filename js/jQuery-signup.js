@@ -81,25 +81,39 @@ $(function () {
                     }
                 } else if (id === 'email') {
                     let email = $(this).val();
-                    let valid_emailAddress = ['@gmail.com', '@comcast.net', '@yahoo.com', '@aol.com', '@michelin.com'];
-                    let valid_email = false;
-                    valid_emailAddress.forEach((item, index, arr) => {
-                        if (email.indexOf(item) !== -1 && email.length > item.length) {
-                            valid_email = true;
-                        }
-                    });
+                    // let valid_emailAddress = ['@gmail.com', '@comcast.net', '@yahoo.com', '@aol.com', '@michelin.com'];
+                    // let valid_email = false;
+                    // valid_emailAddress.forEach((item, index, arr) => {
+                    //     if (email.indexOf(item) !== -1 && email.length > item.length) {
+                    //         valid_email = true;
+                    //     }
+                    // });
 
+                    // new method validate email using regex
+                    let email_regex = /^([a-zA-Z])([a-zA-Z0-9._]*)(@gmail\.com|@comcast\.net|@yahoo\.com|@aol\.com|@michelin\.com)$/;
+                    let valid_email = email_regex.test(email);
+
+                    let img = $('#email-help-img');
                     if (valid_email) {
                         $(this).css({ 'border': 'none' });
+                        img.css({ 'visibility': 'hidden' });
                     } else {
                         invalidInput($(this));
+                        img.css({ 'visibility': 'visible' });
                     }
                 } else if (id === 'password') {
                     let password = $(this).val();
-                    if (password.length < 8 || password.length > 16) {
-                        invalidInput($(this));
-                    } else {
+                    console.log('here');
+                    let password_regex = /(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#$%^&*])^([a-zA-Z])([a-zA-Z0-9!@#$%^&*]{7,15})$/;
+                    let good_password = password_regex.test(password);
+
+                    let img = $('#password-help-img');
+                    if (good_password) {
                         $(this).css({ 'border': 'none' });
+                        img.css({ 'visibility': 'hidden' });
+                    } else {
+                        invalidInput($(this));
+                        img.css({ 'visibility': 'visible' });
                     }
                 } else if (id === 'confirm-password') {
                     let password = $('#password').val();
@@ -145,8 +159,8 @@ $(function () {
             }
         });
 
-        // print(valid_input);
         if (valid_input) {
+            // create a cookie to store user's info and go to account_created.html
 
             let user_info = {};
             // create an object with all of the user's info
@@ -159,7 +173,7 @@ $(function () {
 
             // check to see if account already exists by checking cookies
             // returns true if account does not exist
-            let new_account = newAccount(user_info);
+            let new_account = newAccount(user_info.email);
 
             if (new_account) {
 
@@ -168,7 +182,7 @@ $(function () {
 
                 obj_key = 'object' + String(obj_num);
 
-                Cookies.set(obj_key, JSON.stringify(user_info), {expires: 365});
+                Cookies.set(obj_key, JSON.stringify(user_info), { expires: 365 });
 
                 // window.location.replace('secondpage.html');
                 window.location.href = 'account_created.html';
