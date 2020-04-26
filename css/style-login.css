@@ -96,6 +96,15 @@ body {
     position: relative;
 }
 
+.flex-1 { flex: 1; }
+
+.flex-2 { flex: 2; }
+
+#home-png {
+    margin-top: -8px;
+    margin-right: 3px;
+}
+
 #email-help-img, #password-help-img {
     visibility: hidden;
     top: 6px;
@@ -103,7 +112,7 @@ body {
 }
 
 #email-help-text, #password-help-text {
-    display: none;
+    visibility: hidden;
     margin-top: 5px;
     margin-left: 35px;
     padding: 0;
@@ -112,12 +121,12 @@ body {
 }
 
 #email-help:hover #email-help-text {
-    display: block;
+    visibility: visible;
     background: rgba(255, 82, 82, 0.7);
 }
 
 #password-help:hover #password-help-text {
-    display: block;
+    visibility: visible;
     background: rgba(255, 82, 82, 0.7);
 }
 

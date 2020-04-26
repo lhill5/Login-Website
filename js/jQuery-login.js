@@ -29,6 +29,7 @@ $(function () {
         let good_password = password_regex.test(password);
 
         let img = $('#password-help-img');
+        let text = $('#password-help-text');
 
         if (good_password) {
             $(this).css({ 'border': 'none' });
@@ -36,6 +37,7 @@ $(function () {
 
         } else {
             invalidInput($(this));
+            text.html('Must contain at least one number, symbol, lowercase letter, uppercase letter, and must be between 8-16 characters long.');
             img.css({ 'visibility': 'visible' });
         }
     });
@@ -46,6 +48,10 @@ $(function () {
 
         let email = $('#email-login');
         let password = $('#password-login');
+
+        let email_img = $('#email-help-img');
+        let password_img = $('#password-help-img');
+        let text = $('#password-help-text');
         // console.log(email);
         // console.log(password);
 
@@ -59,21 +65,25 @@ $(function () {
         let email_val = email.val();
         let password_val = password.val();
         // if either email or password are invalid, then program will delete invalid text and replace with "" ("" == invalid)
+
         if (email_val === "") {
             invalidInput(email);
+            email_img.css({ 'visibility': 'visible' });
         }
-        else if (password_val === "") {
+        if (password_val === "") {
             invalidInput(password);
+            password_img.css({ 'visibility': 'visible' });
         }
-        else {
+        else if (email_val !== "" && password_val !== "") {
             // if new account, then tell user account doesnt exist and to create a new account
+            let no_account = $('#no-account');
             if (newAccount(email_val)) {
-                $('#no-account').css({ 'visibility': 'visible' });
+                no_account.css({ 'visibility': 'visible' });
             } else {
                 // if existing account (trying to login so this makes sense) then check to see if password is correct
-                $('#no-account').css({ 'visibility': 'hidden' });
+                no_account.css({ 'visibility': 'hidden' });
                 let user_password = getPassword(email_val);
-                if (user_password == password_val) {
+                if (user_password === password_val) {
                     // user entered correct password, let them sign in
                     let name = getName(email_val, first_name = true);
                     let capitalize = (str) => str.replace(/^\w/, (char) => char.toUpperCase());
@@ -82,7 +92,9 @@ $(function () {
                     // sets anchor part of URL
                     window.location.href = 'logged_in.html' + '#' + name;
                 } else {
-                    invalidInput(password);
+                    invalidInput(password, good_password = true);
+                    text.html('The password you entered for this email: ' + email_val + ' is incorrect.');
+                    password_img.css({ 'visibility': 'visible' });
                 }
             }
         }

@@ -53,15 +53,18 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
 
-        <div class="d-inline-flex justify-content-left order-0 w-100 mr-auto" id="header">
-            <a class="nav-link" href="index.html">Home</a>
+        <div class="d-inline-flex justify-content-left order-0 w-100 mr-auto flex-1" id="header">
+            <a class="nav-link" href="index.html">
+                <img src="png/home.png" width="25px;" height="25px;" id="home-png">
+                Home
+            </a>
         </div>
 
-        <div class="d-inline-flex justify-content-center order-1 w-100 mx-auto">
+        <div class="d-inline-flex justify-content-center order-1 w-100 mx-auto flex-2">
             <h1><a class="nav-link" href="#">Welcome To YouPlex!</a></h1>
         </div>
 
-        <div class="d-inline-flex justify-content-end order-2 w-100 ml-auto" id="navbar-flex">
+        <div class="d-inline-flex justify-content-end order-2 w-100 ml-auto flex-1" id="navbar-flex">
 
             <ul class="navbar-nav" id="navbar-buttons">
                 <li class="nav-item" id="navbar-login">
@@ -78,17 +81,27 @@
 
     <div class="jumbotron jumbotron-fluid text-center" id="jumbotron">
         <div class="container">
-            <h2 class="display-5">Please Sign Up by Creating an Account Below!</h2>
-            <p class="lead">All fields below must be filled out correctly before submitting the form.</p>
+            <h2 class="display-5" id="jumbotron-header">Please Sign Up by Creating an Account Below!</h2>
+            <p class="lead" id="jumbotron-paragraph">All fields below must be filled out correctly before submitting the
+                form.</p>
         </div>
     </div>
 
-    <br>
+    <div class="form-group w-100 text-input">
+  
+            <div class="mx-auto text-center" id="account-exists">
+                <span class="font-22">
+                    An account with this email already exists. Please Login or use a 
+                    different email to create an account.
+                </span>
+            </div>
+        
+    </div>
 
     <!-- FORM -->
     <form action="" class="d-flex w-100">
 
-        <div class="container order-0 ml-5 mt-2 w-100" id="form-container">
+        <div class="container order-0 ml-5 mt-1 w-100" id="form-container">
             <div class="form-group w-75 text-input">
                 <label for="first-name">First Name</label>
                 <input id="first-name" type="text" class="form-control" placeholder="first name">
@@ -214,7 +227,7 @@
 
         </div>
 
-        <div class="container order-1 ml-5 mt-2 w-100">
+        <div class="container order-1 ml-5 mt-1 w-100">
             <div class="form-group w-75 text-input">
                 <label for="username">Enter Username:</label>
                 <input id="username" type="text" class="form-control" value="" placeholder="username">
@@ -224,8 +237,7 @@
                 <label for="email">Enter Email:</label>
                 <input id="email" type="email" class="form-control" value="" placeholder="example@gmail.com">
                 <div class="pos-relative" id="email-help">
-                    <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute"
-                        id="email-help-img">
+                    <img src="png/more_info.png" width="25px" height="25px" class="pos-absolute" id="email-help-img">
                     <div class="pos-absolute" id="email-help-text">
                         <span>
                             Must begin with a letter, contain only alphanumeric characters, use no special symbols,
@@ -259,12 +271,10 @@
 
     </form>
 
-    <br>
     <!-- SUBMIT BUTTON -->
-    <div class="ml-0 w-100 d-flex justify-content-end">
+    <div class="ml-0 mt-1 w-100 d-flex justify-content-end">
         <input type="submit" class="btn btn-primary" id="submit-button" value="Submit">
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

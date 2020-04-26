@@ -94,6 +94,7 @@ $(function () {
                     let valid_email = email_regex.test(email);
 
                     let img = $('#email-help-img');
+
                     if (valid_email) {
                         $(this).css({ 'border': 'none' });
                         img.css({ 'visibility': 'hidden' });
@@ -134,6 +135,10 @@ $(function () {
 
 
     $('#submit-button').on('click', function () {
+
+        let dup_email_message = $('#account-exists');
+        dup_email_message.css({ 'visibility': 'hidden' });
+
         let firstName = $('#first-name');
         let lastName = $('#last-name');
         let phone_number = $('#phone-number');
@@ -160,8 +165,10 @@ $(function () {
         });
 
         if (valid_input) {
-            // create a cookie to store user's info and go to account_created.html
 
+            // initially set duplicate email message to be hidden, later it will be visible if user signs up with existing email
+
+            // create a cookie to store user's info and go to account_created.html
             let user_info = {};
             // create an object with all of the user's info
             input_fields.forEach((item, index) => {
@@ -188,7 +195,7 @@ $(function () {
                 window.location.href = 'account_created.html';
 
             } else {
-                print('An account associated with that email already exists. Please Login In.');
+                dup_email_message.css({ 'visibility': 'visible' });
             }
         }
     });

@@ -1,4 +1,5 @@
-let invalidInput = (jquery_obj) => {
+let invalidInput = (jquery_obj, good_password = false) => {
+    // good password means that it passed the requirements for a password (1 lowercase/uppercase letter, 1 symbol, 1 number, and 8-16 characters long)
     let id = jquery_obj.attr('id');
     let placeholder_message = "";
     switch (id) {
@@ -12,7 +13,13 @@ let invalidInput = (jquery_obj) => {
             break;
         case 'password':
         case 'password-login':
-            placeholder_message = 'Invalid Password';
+            // if good password then it met all of the requirements, but doesn't match user's account password
+            if (good_password) {
+                placeholder_message = 'Incorrect Password';
+            }
+            else {
+                placeholder_message = 'Invalid Password';
+            }
             break;
         case 'email':
         case 'email-login':
@@ -119,11 +126,11 @@ function getName(email, first_name = false, last_name = false) {
 function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
-      if ((new Date().getTime() - start) > milliseconds){
-        break;
-      }
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
     }
-  }
+}
 
 
 

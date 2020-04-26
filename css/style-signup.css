@@ -14,6 +14,26 @@ body {
     /* background-color: #2d98da; */
 }
 
+.centered {
+    /* width: 25%; */
+    /* height: 25%; */
+    /* background-color: red; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.centerFlex {
+    display: flex;
+    flex-direction: column;
+    /* aligns items vertically */
+    align-items: center;
+    /* aligns items horizontally */
+    justify-content: center;
+}
+
 .navbar {
     /* background-color: #000; */
     margin-bottom: 10px;
@@ -84,22 +104,12 @@ body {
     position: relative;
 }
 
-#password {
-}
-
 #email-help-img, #password-help-img {
     visibility: hidden;
     top: -30px;
     right: 0;
     bottom: 0;
-}
-
-#email-help-img {
-    left: 38%;
-}
-
-#password-help-img {
-    left: 26%;
+    left: 90%;
 }
 
 #email-help-text, #password-help-text {
@@ -119,6 +129,27 @@ body {
 #password-help:hover #password-help-text {
     display: block;
     background: rgba(255, 82, 82, 1);
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+#account-exists {
+    visibility: hidden;
+    /* display: none; */
+    background: rgba(255, 82, 82, 1);
+    width: 80%;
+    height: 40px;
+}
+
+.flex-1 { flex: 1; }
+
+.flex-2 { flex: 2; }
+
+#home-png {
+    margin-top: -8px;
+    margin-right: 3px;
 }
 
 
